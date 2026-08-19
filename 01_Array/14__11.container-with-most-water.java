@@ -8,13 +8,14 @@ class Solution {
             int currHeight = Math.min(height[left], height[right]);
             int currWidth = right - left;
             int area = currHeight*currWidth;
-            maxi = Math.max(max, area);
+            maxi = Math.max(maxi, area);
 
             if(height[left]<height[right]){
                 left++;
             }else{
                 right--;
             }
+            
         }
         return maxi;
     }
